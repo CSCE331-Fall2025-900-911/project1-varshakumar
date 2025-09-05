@@ -2,22 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome | Varsha Kumar</title>
+  <title>Varsha Kumar | Single-File, One-Section-At-A-Time</title>
+  <script>
+    function showPage(id) {
+      var sections = document.querySelectorAll("section[data-page]");
+      sections.forEach(function (sec) {
+        sec.style.display = "none";
+        sec.setAttribute("aria-hidden", "true");
+      });
+      var active = document.getElementById(id);
+      if (active) {
+        active.style.display = "block";
+        active.setAttribute("aria-hidden", "false");
+        history.replaceState(null, "", "#" + id);
+      }
+    }
+    // On first load: show "landing" unless a valid hash exists
+    document.addEventListener("DOMContentLoaded", function () {
+      var hash = location.hash ? location.hash.substring(1) : "landing";
+      if (!document.getElementById(hash)) hash = "landing";
+      showPage(hash);
+    });
+  </script>
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>Hello! My name is Varsha Kumar. This is my landing page hosted on TAMU People Pages.</p>
+  <!-- Simple navigation. Each link shows exactly one section -->
+  <nav>
+    <a href="#landing" onclick="showPage('landing'); return false;">Landing</a> |
+    <a href="#portfolio" onclick="showPage('portfolio'); return false;">Portfolio</a> |
+    <a href="#qualifications" onclick="showPage('qualifications'); return false;">Qualifications</a> |
+    <a href="#service" onclick="showPage('service'); return false;">Service</a> |
+  </nav>
 
-  <h2>About Me</h2>
-  <p>I am a student at Texas A&M University. This page will be used to share my projects and class work.</p>
+  <!-- LANDING (links to all other pages, as required) -->
+  <section id="landing" data-page>
+    <h1>Hi, I’m Varsha Kumar</h1>
+    <p>I’m a Computer Science student at Texas A&amp;M. I enjoy building reliable, human-centered software and learning in collaborative teams.</p>
+    <h2>Explore</h2>
+    <ul>
+      <li><a href="#portfolio" onclick="showPage('portfolio'); return false;">Technical Portfolio</a> — project descriptions, future ideas, and GitHub links.</li>
+      <li><a href="#qualifications" onclick="showPage('qualifications'); return false;">Qualifications</a> — resume, skills beyond the resume, and interests.</li>
+      <li><a href="#service" onclick="showPage('service'); return false;">Service</a> — volunteering, mentoring, and plans to give back.</li>
+    </ul>
+  </section>
 
-  <h2>Links</h2>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <!-- PORTFOLIO -->
+  <section id="portfolio" data-page>
+    <h1>Technical Portfolio</h1>
+    <p>This section describes technical projects I’ve completed or would like to complete.</p>
+    <ul>
+      <li><strong>Project A (placeholder):</strong></li>
+      <li><strong>Project B (placeholder):</strong></li>
+      <li><strong>Project C (placeholder):</strong></li>
+    </ul>
+    <p><a href="#landing" onclick="showPage('landing'); return false;">Back to Landing</a></p>
+  </section>
 
-  <p>Thanks for visiting!</p>
+  <!-- QUALIFICATIONS -->
+  <section id="qualifications" data-page>
+    <h1>Qualifications</h1>
+    <p><strong>Resume:</strong> Placeholder</p>
+
+    <h2>Skills (beyond the resume)</h2>
+    <ul>
+      <li><strong>Languages:</strong> Python, Java, JavaScript (placeholders)</li>
+      <li><strong>Frameworks/Tools:</strong> React, Flask, Git, SQL (placeholders)</li>
+      <li><strong>Practices:</strong> testing, readable documentation, code reviews</li>
+    </ul>
+
+    <h2>Areas of Interest &amp; Why</h2>
+    <p>I’m interested in web systems, reliability, and developer experience. I like building useful tools and products that are clear, maintainable, and accessible.</p>
+    <p><a href="#landing" onclick="showPage('landing'); return false;">Back to Landing</a></p>
+  </section>
+
+  <!-- SERVICE -->
+  <section id="service" data-page>
+    <h1>Service</h1>
+    <p>This section describes how I give back to my community—through volunteering, mentoring, or other contributions—and areas I’d like to contribute to.</p>
+    <ul>
+      <li>Mentoring first-year CS students on fundamentals and study habits.</li>
+      <li>Helping run beginner-friendly coding workshops to lower barriers to entry.</li>
+      <li>Planning to contribute to open-source projects with good first issues.</li>
+    </ul>
+    <p><a href="#landing" onclick="showPage('landing'); return false;">Back to Landing</a></p>
+  </section>
 </body>
 </html>
