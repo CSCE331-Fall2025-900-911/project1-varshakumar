@@ -1,46 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Varsha Kumar | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Varsha Kumar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-inner">
-          <div class="brand">Varsha Kumar</div>
-          <div class="nav-links">
-            <a href="landing.html">Landing</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="qualifications.html">Qualifications</a>
-            <a href="service.html">Service</a>
-            <a href="ai.html">AI</a>
-          </div>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Varsha Kumar</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="genai.html">AI Innovation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Technical Portfolio</h2>
+            <p>Explore my projects and technical achievements</p>
+        </section>
+
+        <section class="projects">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project1.jpg" alt="School Safety System Interface" class="project-screenshot">
+                </div>
+                <div class="project-content">
+                    <h3>Project School Safety - Founder/Software Engineer</h3>
+                    <p class="project-tech">Java, AWS, React, Spring Boot</p>
+                    <p class="project-description">
+                        Built out a new access management system for a local low income high school via keycard system. 
+                        Saved school thousands of dollars in software costs, built with Java, AWS, React and Spring Boot. 
+                        Utilized client-side caching and OOP design principles.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project2.jpg" alt="GlamUp App Interface" class="project-screenshot">
+                </div>
+                <div class="project-content">
+                    <h3>"GlamUp" – A Virtual Stylist & Wardrobe Organizer App - Founder/Software Engineer</h3>
+                    <p class="project-tech">React, Firebase, JavaScript</p>
+                    <p class="project-description">
+                        Designed and developed a full-stack virtual wardrobe app using React and Firebase. 
+                        Developed dynamic UI/UX with theme personalization, improving user engagement.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-showcase">
+            <h3>Technical Skills Demonstrated</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>C++</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Web Technologies</h4>
+                    <ul>
+                        <li>HTML5/CSS3</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Frameworks</h4>
+                    <ul>
+                        <li>Git/GitHub</li>
+                        <li>Docker</li>
+                        <li>TensorFlow</li>
+                        <li>Firebase</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="external-resources">
+            <h3>Learning Resources</h3>
+            <div class="resource-links">
+                <a href="https://developer.mozilla.org" class="external-link" target="_blank">MDN Web Docs</a>
+                <a href="https://www.w3schools.com" class="external-link" target="_blank">W3Schools</a>
+                <a href="https://www.freecodecamp.org" class="external-link" target="_blank">freeCodeCamp</a>
+                <a href="https://www.coursera.org" class="external-link" target="_blank">Coursera</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:varshakumar@tamu.edu">Contact Me</a>
+                <a href="https://github.com/varsha-kumarr" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/varshakumarcs/" target="_blank">LinkedIn</a>
+            </div>
         </div>
-      </nav>
+    </footer>
 
-  <main class="container">
-    <div class="card">
-      <h1>Technical Portfolio</h1>
-      <p>This section describes technical projects I’ve completed or would like to complete.</p>
-      <ul>
-        <li><strong>Project A (placeholder):</strong></li>
-        <li><strong>Project B (placeholder):</strong></li>
-        <li><strong>Project C (placeholder):</strong></li>
-      </ul>
-
-      <div class="gallery">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYNFPG1V8Mm235e5DDAwJdPVYPZH9TyeZVhQ&s" alt="Project collage 1" />
-        <img src="https://assets.skyfilabs.com/images/blog/good-computer-science-projects-for-beginners.webp" alt="Computer science projects illustration" />
-        <img src="https://www.atees.org/blog/wp-content/uploads/2019/06/shutterstock-1199480788.png" alt="Developer at work illustration" />
-      </div>
-
-      <div class="spacer"></div>
-      <a class="btn" href="landing.html">← Back to Landing</a>
-    </div>
-    <footer>© <span id="y"></span> Varsha Kumar</footer>
-  </main>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    <script src="script.js"></script>
 </body>
 </html>

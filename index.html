@@ -1,103 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Varsha Kumar | Single-File, One-Section-At-A-Time</title>
-  <script>
-    function showPage(id) {
-      var sections = document.querySelectorAll("section[data-page]");
-      sections.forEach(function (sec) {
-        sec.style.display = "none";
-        sec.setAttribute("aria-hidden", "true");
-      });
-      var active = document.getElementById(id);
-      if (active) {
-        active.style.display = "block";
-        active.setAttribute("aria-hidden", "false");
-        history.replaceState(null, "", "#" + id);
-      }
-    }
-    // On first load: show "landing" unless a valid hash exists
-    document.addEventListener("DOMContentLoaded", function () {
-      var hash = location.hash ? location.hash.substring(1) : "landing";
-      if (!document.getElementById(hash)) hash = "landing";
-      showPage(hash);
-    });
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varsha Kumar - Computer Science Professional</title>
+    <link rel="stylesheet" href="styles.css" id="main-stylesheet">
+    <link rel="stylesheet" href="styles2.css" id="alt-stylesheet" disabled>
 </head>
 <body>
-  <!-- Simple navigation. Each link shows exactly one section -->
-  <nav>
-    <a href="#landing" onclick="showPage('landing'); return false;">Landing</a> |
-    <a href="#portfolio" onclick="showPage('portfolio'); return false;">Portfolio</a> |
-    <a href="#qualifications" onclick="showPage('qualifications'); return false;">Qualifications</a> |
-    <a href="#service" onclick="showPage('service'); return false;">Service</a> |
-  </nav>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Varsha Kumar</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="genai.html">AI Innovation</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- LANDING (links to all other pages, as required) -->
-  <section id="landing" data-page>
-    <h1>Hi, I’m Varsha Kumar</h1>
-    <p>I’m a Computer Science student at Texas A&amp;M. I enjoy building reliable, human-centered software, communication and learning in collaborative teams.</p>
-    <h2>Explore</h2>
-    <ul>
-      <li><a href="#portfolio" onclick="showPage('portfolio'); return false;">Technical Portfolio</a> — project descriptions, future ideas, and GitHub links.</li>
-      <li><a href="#qualifications" onclick="showPage('qualifications'); return false;">Qualifications</a> — resume, skills beyond the resume, and interests.</li>
-      <li><a href="#service" onclick="showPage('service'); return false;">Service</a> — volunteering, mentoring, and plans to give back.</li>
-    </ul>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRokEYt0yyh6uNDKL8uksVLlhZ35laKNQgZ9g&s">
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to My Professional Portfolio</h2>
+                <p class="hero-subtitle">Computer Science Student | Problem Solver | Future Software Engineer</p>
+                <div class="hero-description">
+                    <p>I'm a passionate Computer Science student at Texas A&M University, dedicated to creating innovative solutions through technology. My journey in computer science has been driven by curiosity and a desire to make a meaningful impact in the tech industry.</p>
+                    <p>With a strong foundation in programming languages including Java, Python, and JavaScript, I enjoy tackling complex problems and turning ideas into reality. I'm particularly interested in software engineering, data structures, and emerging technologies like artificial intelligence.</p>
+                    <p>When I’m not coding, you’ll often find me singing or dancing. I enjoy expressing creativity through performance, and I’ve found that those same skills—discipline, rhythm, and the ability to improvise—translate well into computer science. Just like in music and dance, coding requires practice, problem-solving, and finding harmony between different pieces to create something impactful. I believe in continuous learning and bringing creativity into technology, which helps me stay adaptable and innovative in this ever-evolving field.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="portfolio.html" class="btn btn-primary">View My Work</a>
+                    <a href="qualifications.html" class="btn btn-secondary">See Qualifications</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Varsha.jpg" alt="Varsha Kumar - Professional Photo" class="profile-photo">
+            </div>
+        </section>
 
-  </section>
+        <section class="highlights">
+            <h3>What I Will Bring to Your Team</h3>
+            <div class="highlight-grid">
+                <div class="highlight-card">
+                    <h4>Technical Excellence</h4>
+                    <p>Strong foundation in multiple programming languages and frameworks, with experience in full-stack development and system design.</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>Problem Solving</h4>
+                    <p>Analytical mindset with proven ability to break down complex problems and develop efficient, scalable solutions.</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>Team Collaboration</h4>
+                    <p>Excellent communication skills and experience working in diverse teams, contributing to both technical and cultural growth.</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>Continuous Learning</h4>
+                    <p>Passionate about staying current with emerging technologies and always eager to take on new challenges.</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- PORTFOLIO -->
-  <section id="portfolio" data-page>
-    <h1>Technical Portfolio</h1>
-    <p>This section describes technical projects I’ve completed or would like to complete.</p>
-    <ul>
-      <li><strong>Project A (placeholder):</strong></li>
-      <li><strong>Project B (placeholder):</strong></li>
-      <li><strong>Project C (placeholder):</strong></li>
-    </ul>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYNFPG1V8Mm235e5DDAwJdPVYPZH9TyeZVhQ&s">
-    <img src="https://assets.skyfilabs.com/images/blog/good-computer-science-projects-for-beginners.webp">
-    <img src="https://www.atees.org/blog/wp-content/uploads/2019/06/shutterstock-1199480788.png">
-    <p><a href="#landing" onclick="showPage('landing'); return false;">Back to Landing</a></p>
-  </section>
+        <section class="quick-links">
+            <h3>Quick Access</h3>
+            <div class="links-grid">
+                <a href="https://github.com/varsha-kumarr" class="external-link" target="_blank">GitHub Profile</a>
+                <a href="https://www.linkedin.com/in/varshakumarcs/" class="external-link" target="_blank">LinkedIn</a>
+                <a href="https://www.tamu.edu" class="external-link" target="_blank">Texas A&M University</a>
+                <a href="https://www.cs.tamu.edu" class="external-link" target="_blank">TAMU Computer Science</a>
+            </div>
+        </section>
+    </main>
 
-  <!-- QUALIFICATIONS -->
-  <section id="qualifications" data-page>
-    <h1>Qualifications</h1>
-    <p><strong>Resume:</strong> Placeholder</p>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:varshakumar@tamu.edu">Contact Me</a>
+                <a href="https://github.com/varsha-kumarr" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/varshakumarcs/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 
-    <h2>Skills (beyond the resume)</h2>
-    <ul>
-      <li><strong>Languages:</strong> Python, Java, JavaScript (placeholders)</li>
-      <li><strong>Frameworks/Tools:</strong> React, Flask, Git, SQL (placeholders)</li>
-      <li><strong>Practices:</strong> testing, readable documentation, code reviews</li>
-    </ul>
-
-    <h2>Areas of Interest &amp; Why</h2>
-    <p>I’m interested in web systems, reliability, and developer experience. I like building useful tools and products that are clear, maintainable, and accessible.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Resume_logo.jpeg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR5U16C8yXgBpl7-Bc7Itjx3_LRl425zINA&s">
-    <p><a href="#landing" onclick="showPage('landing'); return false;">Back to Landing</a></p>
-  </section>
-
-  <!-- SERVICE -->
-  <section id="service" data-page>
-    <h1>Service</h1>
-    <p>This section describes how I give back to my community—through volunteering, mentoring, or other contributions—and areas I’d like to contribute to.</p>
-    <ul>
-      <li>Mentoring first-year CS students on fundamentals and study habits.</li>
-      <li>Helping run beginner-friendly coding workshops to lower barriers to entry.</li>
-      <li>Planning to contribute to open-source projects with good first issues.</li>
-    </ul>
-    <img src="https://www.billboard.com/wp-content/uploads/media/best-onscreen-a-cappella-moments-nsync-billboard-650.jpg?w=650">
-    <img src="https://i.ytimg.com/vi/NEib_NzXAks/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCrl1CHVlB0paCxRgCP-jox6IEcCg">
-    <img src="https://students.1fbusa.com/hubfs/25%20Ways%20to%20Volunteer%20in%20Your%20Community.jpg">
-    <p><a href="#landing" onclick="showPage('landing'); return false;">Back to Landing</a></p>
-  </section>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
