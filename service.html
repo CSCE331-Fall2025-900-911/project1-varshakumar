@@ -5,6 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service - Varsha Kumar</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline CSS for service page enhancements */
+        .service-card {
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #667eea;
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+        }
+        
+        .service-image img {
+            transition: all 0.3s ease;
+            filter: grayscale(20%);
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+        
+        .service-impact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-impact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .goal-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .goal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.05), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .goal-card:hover::before {
+            left: 100%;
+        }
+        
+        .goal-card:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+        }
+        
+        .philosophy-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .philosophy-list li::before {
+            content: '💡';
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .philosophy-list li:hover {
+            color: #667eea;
+            transform: translateX(10px);
+        }
+        
+        .philosophy-list li:hover::before {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        .intro-content {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .intro-content:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.1);
+        }
+        
+        .page-header h2 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: slideInDown 1s ease-out;
+        }
+        
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .service-activities {
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .external-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .external-link::after {
+            content: '↗';
+            position: absolute;
+            right: -1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .external-link:hover::after {
+            opacity: 1;
+            right: -1.5rem;
+        }
+        
+        .external-link:hover {
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .service-org {
+            color: #6c757d;
+            font-style: italic;
+            font-weight: 500;
+        }
+        
+        .service-duration {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .philosophy-content {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .philosophy-content:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.1);
+        }
+    </style>
 </head>
 <body>
     <header>
