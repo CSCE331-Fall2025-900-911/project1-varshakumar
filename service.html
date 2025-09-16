@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service - Varsha Kumar</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" id="main-stylesheet">
+    <link rel="stylesheet" href="styles2.css" id="alt-stylesheet" disabled>
     <style>
         /* Inline CSS for service page enhancements */
         .service-card {
@@ -21,7 +22,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(45, 90, 39, 0.1), transparent);
             transition: left 0.6s ease;
         }
         
@@ -31,8 +32,8 @@
         
         .service-card:hover {
             transform: translateY(-8px);
-            border-color: #667eea;
-            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+            border-color: #2d5a27;
+            box-shadow: 0 15px 35px rgba(45, 90, 39, 0.2);
         }
         
         .service-image img {
@@ -46,7 +47,7 @@
         }
         
         .service-impact {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
             color: white;
             padding: 1rem;
             border-radius: 10px;
@@ -85,7 +86,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.05), transparent);
+            background: linear-gradient(90deg, transparent, rgba(45, 90, 39, 0.05), transparent);
             transition: left 0.6s ease;
         }
         
@@ -95,8 +96,8 @@
         
         .goal-card:hover {
             transform: translateY(-5px);
-            border-color: #667eea;
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+            border-color: #2d5a27;
+            box-shadow: 0 10px 25px rgba(45, 90, 39, 0.15);
         }
         
         .philosophy-list li {
@@ -115,7 +116,7 @@
         }
         
         .philosophy-list li:hover {
-            color: #667eea;
+            color: #2d5a27;
             transform: translateX(10px);
         }
         
@@ -127,17 +128,17 @@
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 2rem;
             border-radius: 15px;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #2d5a27;
             transition: all 0.3s ease;
         }
         
         .intro-content:hover {
             transform: translateX(10px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.1);
+            box-shadow: 0 8px 20px rgba(45, 90, 39, 0.1);
         }
         
         .page-header h2 {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -191,7 +192,7 @@
         }
         
         .external-link:hover {
-            color: #667eea;
+            color: #2d5a27;
             transform: translateY(-2px);
         }
         
@@ -202,7 +203,7 @@
         }
         
         .service-duration {
-            color: #667eea;
+            color: #2d5a27;
             font-weight: 600;
             font-size: 0.9rem;
         }
@@ -211,13 +212,369 @@
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 2rem;
             border-radius: 15px;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #2d5a27;
             transition: all 0.3s ease;
         }
         
         .philosophy-content:hover {
             transform: translateX(10px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.1);
+            box-shadow: 0 8px 20px rgba(45, 90, 39, 0.1);
+        }
+        
+        /* Dark mode inline CSS - Silver/Grey theme */
+        [data-theme="dark"] .service-card::before,
+        .dark-theme .service-card::before {
+            background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.1), transparent);
+        }
+        
+        [data-theme="dark"] .service-card:hover,
+        .dark-theme .service-card:hover {
+            border-color: #c0c0c0;
+            box-shadow: 0 15px 35px rgba(192, 192, 192, 0.2);
+        }
+        
+        [data-theme="dark"] .service-impact,
+        .dark-theme .service-impact {
+            background: linear-gradient(135deg, #c0c0c0, #808080);
+            color: #000000 !important;
+        }
+        
+        [data-theme="dark"] .goal-card::before,
+        .dark-theme .goal-card::before {
+            background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.05), transparent);
+        }
+        
+        [data-theme="dark"] .goal-card:hover,
+        .dark-theme .goal-card:hover {
+            border-color: #c0c0c0;
+            box-shadow: 0 10px 25px rgba(192, 192, 192, 0.15);
+        }
+        
+        [data-theme="dark"] .philosophy-list li:hover,
+        .dark-theme .philosophy-list li:hover {
+            color: #c0c0c0;
+        }
+        
+        [data-theme="dark"] .intro-content,
+        .dark-theme .intro-content {
+            border-left-color: #c0c0c0;
+        }
+        
+        [data-theme="dark"] .intro-content:hover,
+        .dark-theme .intro-content:hover {
+            box-shadow: 0 8px 20px rgba(192, 192, 192, 0.1);
+        }
+        
+        [data-theme="dark"] .page-header h2,
+        .dark-theme .page-header h2 {
+            background: linear-gradient(135deg, #c0c0c0 0%, #808080 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        [data-theme="dark"] .external-link:hover,
+        .dark-theme .external-link:hover {
+            color: #c0c0c0;
+        }
+        
+        [data-theme="dark"] .service-duration,
+        .dark-theme .service-duration {
+            color: #c0c0c0;
+        }
+        
+        [data-theme="dark"] .philosophy-content,
+        .dark-theme .philosophy-content {
+            border-left-color: #c0c0c0;
+        }
+        
+        [data-theme="dark"] .philosophy-content:hover,
+        .dark-theme .philosophy-content:hover {
+            box-shadow: 0 8px 20px rgba(192, 192, 192, 0.1);
+        }
+        
+        /* Fix service section visibility in dark mode */
+        [data-theme="dark"] .service-activities,
+        .dark-theme .service-activities {
+            background: rgba(26, 26, 26, 0.8) !important;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid #333333;
+            margin: 2rem 0;
+        }
+        
+        [data-theme="dark"] .service-card,
+        .dark-theme .service-card {
+            background: linear-gradient(135deg, #1a1a1a, #000000) !important;
+            border: 1px solid #333333 !important;
+            color: #ffffff !important;
+        }
+        
+        [data-theme="dark"] .service-card h4,
+        .dark-theme .service-card h4 {
+            color: #c0c0c0 !important;
+        }
+        
+        [data-theme="dark"] .service-card p,
+        .dark-theme .service-card p {
+            color: #cccccc !important;
+        }
+        
+        [data-theme="dark"] .service-org,
+        .dark-theme .service-org {
+            color: #888888 !important;
+        }
+        
+        /* Fix Service & Leadership Beyond the Classroom visibility */
+        [data-theme="dark"] .service-intro,
+        .dark-theme .service-intro {
+            background: rgba(26, 26, 26, 0.9) !important;
+            border: 2px solid #333333 !important;
+            border-radius: 20px !important;
+            padding: 2.5rem !important;
+            margin: 2rem 0 !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+        }
+        
+        [data-theme="dark"] .service-intro h3,
+        .dark-theme .service-intro h3 {
+            color: #c0c0c0 !important;
+            font-size: 2rem !important;
+            margin-bottom: 1.5rem !important;
+            text-shadow: 0 0 10px rgba(192, 192, 192, 0.3) !important;
+        }
+        
+        [data-theme="dark"] .service-intro p,
+        .dark-theme .service-intro p {
+            color: #e0e0e0 !important;
+            font-size: 1.1rem !important;
+            line-height: 1.7 !important;
+            text-align: justify !important;
+        }
+        
+        [data-theme="dark"] .intro-content,
+        .dark-theme .intro-content {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(0, 0, 0, 0.6)) !important;
+            border: 2px solid #333333 !important;
+            border-left: 5px solid #c0c0c0 !important;
+            border-radius: 20px !important;
+            padding: 3rem !important;
+            margin: 2rem 0 !important;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
+        }
+        
+        [data-theme="dark"] .intro-content h3,
+        .dark-theme .intro-content h3 {
+            color: #ffffff !important;
+            font-size: 2.2rem !important;
+            margin-bottom: 1.5rem !important;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2) !important;
+        }
+        
+        [data-theme="dark"] .intro-content p,
+        .dark-theme .intro-content p {
+            color: #cccccc !important;
+            font-size: 1.1rem !important;
+            line-height: 1.8 !important;
+        }
+        
+        /* Center and improve Leadership & Service Activities layout */
+        [data-theme="dark"] .service-activities,
+        .dark-theme .service-activities {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding: 3rem 2rem !important;
+        }
+        
+        [data-theme="dark"] .service-activities h3,
+        .dark-theme .service-activities h3 {
+            text-align: center !important;
+            margin-bottom: 3rem !important;
+            font-size: 2.5rem !important;
+            color: #c0c0c0 !important;
+            text-shadow: 0 0 15px rgba(192, 192, 192, 0.3) !important;
+        }
+        
+        [data-theme="dark"] .service-card,
+        .dark-theme .service-card {
+            max-width: 800px !important;
+            width: 100% !important;
+            margin: 2rem auto !important;
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: flex-start !important;
+            gap: 2rem !important;
+            padding: 2.5rem !important;
+        }
+        
+        [data-theme="dark"] .service-image,
+        .dark-theme .service-image {
+            flex-shrink: 0 !important;
+            width: 200px !important;
+            height: 200px !important;
+            border-radius: 15px !important;
+            overflow: hidden !important;
+        }
+        
+        [data-theme="dark"] .service-image img,
+        .dark-theme .service-image img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            border-radius: 15px !important;
+        }
+        
+        [data-theme="dark"] .service-content,
+        .dark-theme .service-content {
+            flex: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        
+        [data-theme="dark"] .service-content h4,
+        .dark-theme .service-content h4 {
+            font-size: 1.5rem !important;
+            margin-bottom: 1rem !important;
+            color: #ffffff !important;
+        }
+        
+        [data-theme="dark"] .service-content .service-org,
+        .dark-theme .service-content .service-org {
+            font-size: 1.1rem !important;
+            margin-bottom: 0.5rem !important;
+            color: #c0c0c0 !important;
+        }
+        
+        [data-theme="dark"] .service-content .service-duration,
+        .dark-theme .service-content .service-duration {
+            font-size: 1rem !important;
+            margin-bottom: 1rem !important;
+            color: #888888 !important;
+        }
+        
+        [data-theme="dark"] .service-content .service-description,
+        .dark-theme .service-content .service-description {
+            font-size: 1.1rem !important;
+            line-height: 1.7 !important;
+            margin-bottom: 1.5rem !important;
+            color: #e0e0e0 !important;
+        }
+        
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            [data-theme="dark"] .service-card,
+            .dark-theme .service-card {
+                flex-direction: column !important;
+                text-align: center !important;
+                max-width: 100% !important;
+                margin: 1.5rem 0 !important;
+                padding: 2rem !important;
+            }
+            
+            [data-theme="dark"] .service-image,
+            .dark-theme .service-image {
+                width: 150px !important;
+                height: 150px !important;
+                margin: 0 auto 1.5rem auto !important;
+            }
+            
+            [data-theme="dark"] .service-activities,
+            .dark-theme .service-activities {
+                padding: 2rem 1rem !important;
+            }
+            
+            [data-theme="dark"] .service-activities h3,
+            .dark-theme .service-activities h3 {
+                font-size: 2rem !important;
+                margin-bottom: 2rem !important;
+            }
+        }
+        
+        /* Fix philosophy section visibility in dark mode */
+        [data-theme="dark"] .service-philosophy,
+        .dark-theme .service-philosophy {
+            background: rgba(26, 26, 26, 0.8) !important;
+            border-radius: 20px !important;
+            padding: 3rem 2rem !important;
+            border: 2px solid #333333 !important;
+            margin: 3rem 0 !important;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+        }
+        
+        [data-theme="dark"] .service-philosophy h3,
+        .dark-theme .service-philosophy h3 {
+            color: #c0c0c0 !important;
+            font-size: 2.2rem !important;
+            margin-bottom: 2rem !important;
+            text-align: center !important;
+            text-shadow: 0 0 15px rgba(192, 192, 192, 0.3) !important;
+        }
+        
+        [data-theme="dark"] .service-philosophy .philosophy-content,
+        .dark-theme .service-philosophy .philosophy-content {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(0, 0, 0, 0.7)) !important;
+            border: 2px solid #333333 !important;
+            border-left: 5px solid #c0c0c0 !important;
+            border-radius: 20px !important;
+            padding: 3rem !important;
+            margin: 2rem 0 !important;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
+        }
+        
+        [data-theme="dark"] .service-philosophy .philosophy-content p,
+        .dark-theme .service-philosophy .philosophy-content p {
+            color: #e0e0e0 !important;
+            font-size: 1.2rem !important;
+            line-height: 1.8 !important;
+            margin-bottom: 1.5rem !important;
+            text-align: justify !important;
+        }
+        
+        [data-theme="dark"] .service-philosophy .philosophy-list,
+        .dark-theme .service-philosophy .philosophy-list {
+            margin-top: 2rem !important;
+        }
+        
+        [data-theme="dark"] .service-philosophy .philosophy-list li,
+        .dark-theme .service-philosophy .philosophy-list li {
+            color: #cccccc !important;
+            font-size: 1.1rem !important;
+            line-height: 1.7 !important;
+            margin-bottom: 1.5rem !important;
+            padding-left: 2rem !important;
+        }
+        
+        [data-theme="dark"] .service-philosophy .philosophy-list li strong,
+        .dark-theme .service-philosophy .philosophy-list li strong {
+            color: #c0c0c0 !important;
+            font-weight: 600 !important;
+        }
+        
+        /* Mobile responsive for philosophy section */
+        @media (max-width: 768px) {
+            [data-theme="dark"] .service-philosophy,
+            .dark-theme .service-philosophy {
+                padding: 2rem 1rem !important;
+                margin: 2rem 0 !important;
+            }
+            
+            [data-theme="dark"] .service-philosophy .philosophy-content,
+            .dark-theme .service-philosophy .philosophy-content {
+                padding: 2rem !important;
+            }
+            
+            [data-theme="dark"] .service-philosophy h3,
+            .dark-theme .service-philosophy h3 {
+                font-size: 1.8rem !important;
+            }
+            
+            [data-theme="dark"] .service-philosophy .philosophy-content p,
+            .dark-theme .service-philosophy .philosophy-content p {
+                font-size: 1.1rem !important;
+            }
         }
     </style>
 </head>

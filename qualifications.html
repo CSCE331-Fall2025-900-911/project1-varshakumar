@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qualifications - Varsha Kumar</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" id="main-stylesheet">
+    <link rel="stylesheet" href="styles2.css" id="alt-stylesheet" disabled>
     <style>
         /* Inline CSS for qualifications page enhancements */
         .resume-preview {
@@ -20,7 +21,7 @@
         }
         
         .resume-download-btn {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #2d5a27, #4a7c59);
             color: white;
             padding: 0.8rem 1.5rem;
             border-radius: 25px;
@@ -33,13 +34,13 @@
         
         .resume-download-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 8px 20px rgba(45, 90, 39, 0.4);
             text-decoration: none;
             color: white;
         }
         
         .skill-fill {
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #2d5a27, #4a7c59);
             height: 100%;
             border-radius: 10px;
             transition: width 1.5s ease-in-out;
@@ -81,7 +82,7 @@
         }
         
         .skill-tag {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #2d5a27, #4a7c59);
             color: white;
             padding: 0.4rem 0.8rem;
             border-radius: 15px;
@@ -93,7 +94,7 @@
         
         .skill-tag:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 4px 10px rgba(45, 90, 39, 0.3);
         }
         
         .interest-card {
@@ -110,7 +111,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.05), transparent);
+            background: linear-gradient(90deg, transparent, rgba(45, 90, 39, 0.05), transparent);
             transition: left 0.6s ease;
         }
         
@@ -120,21 +121,21 @@
         
         .interest-card:hover {
             transform: translateY(-5px);
-            border-color: #667eea;
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+            border-color: #2d5a27;
+            box-shadow: 0 10px 25px rgba(45, 90, 39, 0.15);
         }
         
         .education-item {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 2rem;
             border-radius: 15px;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #2d5a27;
             transition: all 0.3s ease;
         }
         
         .education-item:hover {
             transform: translateX(10px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.1);
+            box-shadow: 0 8px 20px rgba(45, 90, 39, 0.1);
         }
         
         .coursework li {
@@ -148,17 +149,17 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #667eea;
+            color: #2d5a27;
             font-weight: bold;
         }
         
         .coursework li:hover {
-            color: #667eea;
+            color: #2d5a27;
             transform: translateX(5px);
         }
         
         .page-header h2 {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -197,8 +198,150 @@
         }
         
         .external-link:hover {
-            color: #667eea;
+            color: #2d5a27;
             transform: translateY(-2px);
+        }
+        
+        /* Dark mode inline CSS - Silver/Grey theme */
+        [data-theme="dark"] .resume-download-btn,
+        .dark-theme .resume-download-btn {
+            background: linear-gradient(45deg, #c0c0c0, #808080);
+        }
+        
+        [data-theme="dark"] .resume-download-btn:hover,
+        .dark-theme .resume-download-btn:hover {
+            box-shadow: 0 8px 20px rgba(192, 192, 192, 0.4);
+        }
+        
+        [data-theme="dark"] .skill-fill,
+        .dark-theme .skill-fill {
+            background: linear-gradient(90deg, #c0c0c0, #808080);
+        }
+        
+        [data-theme="dark"] .skill-tag,
+        .dark-theme .skill-tag {
+            background: linear-gradient(45deg, #c0c0c0, #808080);
+        }
+        
+        [data-theme="dark"] .skill-tag:hover,
+        .dark-theme .skill-tag:hover {
+            box-shadow: 0 4px 10px rgba(192, 192, 192, 0.3);
+        }
+        
+        [data-theme="dark"] .interest-card::before,
+        .dark-theme .interest-card::before {
+            background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.05), transparent);
+        }
+        
+        [data-theme="dark"] .interest-card:hover,
+        .dark-theme .interest-card:hover {
+            border-color: #c0c0c0;
+            box-shadow: 0 10px 25px rgba(192, 192, 192, 0.15);
+        }
+        
+        [data-theme="dark"] .education-item,
+        .dark-theme .education-item {
+            border-left-color: #c0c0c0;
+        }
+        
+        [data-theme="dark"] .education-item:hover,
+        .dark-theme .education-item:hover {
+            box-shadow: 0 8px 20px rgba(192, 192, 192, 0.1);
+        }
+        
+        [data-theme="dark"] .coursework li::before,
+        .dark-theme .coursework li::before {
+            color: #c0c0c0;
+        }
+        
+        [data-theme="dark"] .coursework li:hover,
+        .dark-theme .coursework li:hover {
+            color: #c0c0c0;
+        }
+        
+        [data-theme="dark"] .page-header h2,
+        .dark-theme .page-header h2 {
+            background: linear-gradient(135deg, #c0c0c0 0%, #808080 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        [data-theme="dark"] .external-link:hover,
+        .dark-theme .external-link:hover {
+            color: #c0c0c0;
+        }
+        
+        /* Fix education section visibility in dark mode */
+        [data-theme="dark"] .education,
+        .dark-theme .education {
+            background: rgba(26, 26, 26, 0.8) !important;
+            border-radius: 20px !important;
+            padding: 2rem !important;
+            border: 2px solid #333333 !important;
+            margin: 2rem 0 !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+        }
+        
+        [data-theme="dark"] .education h3,
+        .dark-theme .education h3 {
+            color: #c0c0c0 !important;
+            font-size: 2rem !important;
+            margin-bottom: 1.5rem !important;
+            text-shadow: 0 0 10px rgba(192, 192, 192, 0.3) !important;
+        }
+        
+        [data-theme="dark"] .education-item,
+        .dark-theme .education-item {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(0, 0, 0, 0.7)) !important;
+            border: 2px solid #333333 !important;
+            border-left: 5px solid #c0c0c0 !important;
+            border-radius: 20px !important;
+            padding: 2.5rem !important;
+            margin: 2rem 0 !important;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
+        }
+        
+        [data-theme="dark"] .education-item h4,
+        .dark-theme .education-item h4 {
+            color: #ffffff !important;
+            font-size: 1.8rem !important;
+            margin-bottom: 0.8rem !important;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2) !important;
+        }
+        
+        [data-theme="dark"] .education-item .degree,
+        .dark-theme .education-item .degree {
+            color: #c0c0c0 !important;
+            font-size: 1.3rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        
+        [data-theme="dark"] .education-item .dates,
+        .dark-theme .education-item .dates {
+            color: #888888 !important;
+            font-size: 1.1rem !important;
+            margin-bottom: 0.3rem !important;
+        }
+        
+        [data-theme="dark"] .education-item .gpa,
+        .dark-theme .education-item .gpa {
+            color: #c0c0c0 !important;
+            font-size: 1.1rem !important;
+            font-weight: 600 !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        [data-theme="dark"] .education-item .coursework,
+        .dark-theme .education-item .coursework {
+            margin-top: 1.5rem !important;
+        }
+        
+        [data-theme="dark"] .education-item .coursework li,
+        .dark-theme .education-item .coursework li {
+            color: #e0e0e0 !important;
+            margin-bottom: 0.8rem !important;
+            font-size: 1.1rem !important;
         }
     </style>
 </head>
