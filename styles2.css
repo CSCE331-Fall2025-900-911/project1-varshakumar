@@ -760,6 +760,546 @@ footer::after {
     margin-bottom: 0.5rem;
 }
 
+/* Dark Mode Enhanced Visual Elements */
+[data-theme="dark"] .hero-content h2,
+.dark-theme .hero-content h2 {
+    background: linear-gradient(135deg, #c0c0c0 0%, #808080 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+[data-theme="dark"] .highlight-card:hover,
+.dark-theme .highlight-card:hover {
+    border-color: #c0c0c0;
+    box-shadow: 0 10px 25px rgba(192, 192, 192, 0.15);
+}
+
+[data-theme="dark"] .btn-primary,
+.dark-theme .btn-primary {
+    background: linear-gradient(45deg, #c0c0c0, #808080);
+}
+
+[data-theme="dark"] .btn-primary:hover,
+.dark-theme .btn-primary:hover {
+    box-shadow: 0 5px 15px rgba(192, 192, 192, 0.4);
+}
+
+[data-theme="dark"] .profile-photo,
+.dark-theme .profile-photo {
+    border-color: #c0c0c0;
+}
+
+[data-theme="dark"] .profile-photo:hover,
+.dark-theme .profile-photo:hover {
+    box-shadow: 0 10px 30px rgba(192, 192, 192, 0.3);
+}
+
+[data-theme="dark"] .external-link::before,
+.dark-theme .external-link::before {
+    background: linear-gradient(90deg, #c0c0c0, #808080);
+}
+
+[data-theme="dark"] .external-link:hover,
+.dark-theme .external-link:hover {
+    color: #c0c0c0;
+}
+
+[data-theme="dark"] .external-link::after,
+.dark-theme .external-link::after {
+    content: '↗';
+    position: absolute;
+    right: -1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .external-link:hover::after,
+.dark-theme .external-link:hover::after {
+    opacity: 1;
+    right: -1.5rem;
+}
+
+[data-theme="dark"] .page-header h2,
+.dark-theme .page-header h2 {
+    background: linear-gradient(135deg, #c0c0c0 0%, #808080 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Portfolio Page Dark Mode Enhancements */
+[data-theme="dark"] .project-card::before,
+.dark-theme .project-card::before {
+    background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.1), transparent);
+}
+
+[data-theme="dark"] .project-card:hover,
+.dark-theme .project-card:hover {
+    border-color: #c0c0c0;
+    box-shadow: 0 15px 35px rgba(192, 192, 192, 0.2);
+}
+
+[data-theme="dark"] .project-tech,
+.dark-theme .project-tech {
+    background: linear-gradient(45deg, #c0c0c0, #808080);
+}
+
+[data-theme="dark"] .skill-category:hover,
+.dark-theme .skill-category:hover {
+    border-color: #c0c0c0;
+    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.1);
+}
+
+[data-theme="dark"] .skill-category ul li::before,
+.dark-theme .skill-category ul li::before {
+    color: #c0c0c0;
+}
+
+[data-theme="dark"] .skill-category ul li:hover,
+.dark-theme .skill-category ul li:hover {
+    color: #c0c0c0;
+}
+
+/* Qualifications Page Dark Mode Enhancements */
+[data-theme="dark"] .resume-download-btn,
+.dark-theme .resume-download-btn {
+    background: linear-gradient(45deg, #c0c0c0, #808080);
+}
+
+[data-theme="dark"] .resume-download-btn:hover,
+.dark-theme .resume-download-btn:hover {
+    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.4);
+}
+
+[data-theme="dark"] .skill-fill,
+.dark-theme .skill-fill {
+    background: linear-gradient(90deg, #c0c0c0, #808080);
+}
+
+[data-theme="dark"] .skill-tag,
+.dark-theme .skill-tag {
+    background: linear-gradient(45deg, #c0c0c0, #808080);
+}
+
+[data-theme="dark"] .skill-tag:hover,
+.dark-theme .skill-tag:hover {
+    box-shadow: 0 4px 10px rgba(192, 192, 192, 0.3);
+}
+
+[data-theme="dark"] .interest-card::before,
+.dark-theme .interest-card::before {
+    background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.05), transparent);
+}
+
+[data-theme="dark"] .interest-card:hover,
+.dark-theme .interest-card:hover {
+    border-color: #c0c0c0;
+    box-shadow: 0 10px 25px rgba(192, 192, 192, 0.15);
+}
+
+[data-theme="dark"] .education-item,
+.dark-theme .education-item {
+    border-left-color: #c0c0c0;
+}
+
+[data-theme="dark"] .education-item:hover,
+.dark-theme .education-item:hover {
+    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.1);
+}
+
+[data-theme="dark"] .coursework li::before,
+.dark-theme .coursework li::before {
+    color: #c0c0c0;
+}
+
+[data-theme="dark"] .coursework li:hover,
+.dark-theme .coursework li:hover {
+    color: #c0c0c0;
+}
+
+/* Fix education section visibility in dark mode */
+[data-theme="dark"] .education,
+.dark-theme .education {
+    background: rgba(26, 26, 26, 0.8) !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+    border: 2px solid #333333 !important;
+    margin: 2rem 0 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .education h3,
+.dark-theme .education h3 {
+    color: #c0c0c0 !important;
+    font-size: 2rem !important;
+    margin-bottom: 1.5rem !important;
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.3) !important;
+}
+
+[data-theme="dark"] .education-item,
+.dark-theme .education-item {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(0, 0, 0, 0.7)) !important;
+    border: 2px solid #333333 !important;
+    border-left: 5px solid #c0c0c0 !important;
+    border-radius: 20px !important;
+    padding: 2.5rem !important;
+    margin: 2rem 0 !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .education-item h4,
+.dark-theme .education-item h4 {
+    color: #ffffff !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 0.8rem !important;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .education-item .degree,
+.dark-theme .education-item .degree {
+    color: #c0c0c0 !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+[data-theme="dark"] .education-item .dates,
+.dark-theme .education-item .dates {
+    color: #888888 !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 0.3rem !important;
+}
+
+[data-theme="dark"] .education-item .gpa,
+.dark-theme .education-item .gpa {
+    color: #c0c0c0 !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 1rem !important;
+}
+
+[data-theme="dark"] .education-item .coursework,
+.dark-theme .education-item .coursework {
+    margin-top: 1.5rem !important;
+}
+
+[data-theme="dark"] .education-item .coursework li,
+.dark-theme .education-item .coursework li {
+    color: #e0e0e0 !important;
+    margin-bottom: 0.8rem !important;
+    font-size: 1.1rem !important;
+}
+
+/* Service Page Dark Mode Enhancements */
+[data-theme="dark"] .service-card::before,
+.dark-theme .service-card::before {
+    background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.1), transparent);
+}
+
+[data-theme="dark"] .service-card:hover,
+.dark-theme .service-card:hover {
+    border-color: #c0c0c0;
+    box-shadow: 0 15px 35px rgba(192, 192, 192, 0.2);
+}
+
+[data-theme="dark"] .service-impact,
+.dark-theme .service-impact {
+    background: linear-gradient(135deg, #c0c0c0, #808080);
+    color: #000000 !important;
+}
+
+[data-theme="dark"] .goal-card::before,
+.dark-theme .goal-card::before {
+    background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.05), transparent);
+}
+
+[data-theme="dark"] .goal-card:hover,
+.dark-theme .goal-card:hover {
+    border-color: #c0c0c0;
+    box-shadow: 0 10px 25px rgba(192, 192, 192, 0.15);
+}
+
+[data-theme="dark"] .philosophy-list li:hover,
+.dark-theme .philosophy-list li:hover {
+    color: #c0c0c0;
+}
+
+[data-theme="dark"] .intro-content,
+.dark-theme .intro-content {
+    border-left-color: #c0c0c0;
+}
+
+[data-theme="dark"] .intro-content:hover,
+.dark-theme .intro-content:hover {
+    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.1);
+}
+
+[data-theme="dark"] .service-duration,
+.dark-theme .service-duration {
+    color: #c0c0c0;
+}
+
+[data-theme="dark"] .philosophy-content,
+.dark-theme .philosophy-content {
+    border-left-color: #c0c0c0;
+}
+
+[data-theme="dark"] .philosophy-content:hover,
+.dark-theme .philosophy-content:hover {
+    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.1);
+}
+
+/* Center and improve Leadership & Service Activities layout */
+[data-theme="dark"] .service-activities,
+.dark-theme .service-activities {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 3rem 2rem !important;
+}
+
+[data-theme="dark"] .service-activities h3,
+.dark-theme .service-activities h3 {
+    text-align: center !important;
+    margin-bottom: 3rem !important;
+    font-size: 2.5rem !important;
+    color: #c0c0c0 !important;
+    text-shadow: 0 0 15px rgba(192, 192, 192, 0.3) !important;
+}
+
+[data-theme="dark"] .service-card,
+.dark-theme .service-card {
+    max-width: 800px !important;
+    width: 100% !important;
+    margin: 2rem auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 2rem !important;
+    padding: 2.5rem !important;
+}
+
+[data-theme="dark"] .service-image,
+.dark-theme .service-image {
+    flex-shrink: 0 !important;
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+}
+
+[data-theme="dark"] .service-image img,
+.dark-theme .service-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 15px !important;
+}
+
+[data-theme="dark"] .service-content,
+.dark-theme .service-content {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+[data-theme="dark"] .service-content h4,
+.dark-theme .service-content h4 {
+    font-size: 1.5rem !important;
+    margin-bottom: 1rem !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .service-content .service-org,
+.dark-theme .service-content .service-org {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.5rem !important;
+    color: #c0c0c0 !important;
+}
+
+[data-theme="dark"] .service-content .service-duration,
+.dark-theme .service-content .service-duration {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+    color: #888888 !important;
+}
+
+[data-theme="dark"] .service-content .service-description,
+.dark-theme .service-content .service-description {
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 1.5rem !important;
+    color: #e0e0e0 !important;
+}
+
+/* Fix Service & Leadership Beyond the Classroom visibility */
+[data-theme="dark"] .service-intro,
+.dark-theme .service-intro {
+    background: rgba(26, 26, 26, 0.9) !important;
+    border: 2px solid #333333 !important;
+    border-radius: 20px !important;
+    padding: 2.5rem !important;
+    margin: 2rem 0 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .service-intro h3,
+.dark-theme .service-intro h3 {
+    color: #c0c0c0 !important;
+    font-size: 2rem !important;
+    margin-bottom: 1.5rem !important;
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.3) !important;
+}
+
+[data-theme="dark"] .service-intro p,
+.dark-theme .service-intro p {
+    color: #e0e0e0 !important;
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+    text-align: justify !important;
+}
+
+[data-theme="dark"] .intro-content,
+.dark-theme .intro-content {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(0, 0, 0, 0.6)) !important;
+    border: 2px solid #333333 !important;
+    border-left: 5px solid #c0c0c0 !important;
+    border-radius: 20px !important;
+    padding: 3rem !important;
+    margin: 2rem 0 !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .intro-content h3,
+.dark-theme .intro-content h3 {
+    color: #ffffff !important;
+    font-size: 2.2rem !important;
+    margin-bottom: 1.5rem !important;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .intro-content p,
+.dark-theme .intro-content p {
+    color: #cccccc !important;
+    font-size: 1.1rem !important;
+    line-height: 1.8 !important;
+}
+
+/* Fix philosophy section visibility in dark mode */
+[data-theme="dark"] .service-philosophy,
+.dark-theme .service-philosophy {
+    background: rgba(26, 26, 26, 0.8) !important;
+    border-radius: 20px !important;
+    padding: 3rem 2rem !important;
+    border: 2px solid #333333 !important;
+    margin: 3rem 0 !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .service-philosophy h3,
+.dark-theme .service-philosophy h3 {
+    color: #c0c0c0 !important;
+    font-size: 2.2rem !important;
+    margin-bottom: 2rem !important;
+    text-align: center !important;
+    text-shadow: 0 0 15px rgba(192, 192, 192, 0.3) !important;
+}
+
+[data-theme="dark"] .service-philosophy .philosophy-content,
+.dark-theme .service-philosophy .philosophy-content {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(0, 0, 0, 0.7)) !important;
+    border: 2px solid #333333 !important;
+    border-left: 5px solid #c0c0c0 !important;
+    border-radius: 20px !important;
+    padding: 3rem !important;
+    margin: 2rem 0 !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .service-philosophy .philosophy-content p,
+.dark-theme .service-philosophy .philosophy-content p {
+    color: #e0e0e0 !important;
+    font-size: 1.2rem !important;
+    line-height: 1.8 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: justify !important;
+}
+
+[data-theme="dark"] .service-philosophy .philosophy-list,
+.dark-theme .service-philosophy .philosophy-list {
+    margin-top: 2rem !important;
+}
+
+[data-theme="dark"] .service-philosophy .philosophy-list li,
+.dark-theme .service-philosophy .philosophy-list li {
+    color: #cccccc !important;
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 1.5rem !important;
+    padding-left: 2rem !important;
+}
+
+[data-theme="dark"] .service-philosophy .philosophy-list li strong,
+.dark-theme .service-philosophy .philosophy-list li strong {
+    color: #c0c0c0 !important;
+    font-weight: 600 !important;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    [data-theme="dark"] .service-card,
+    .dark-theme .service-card {
+        flex-direction: column !important;
+        text-align: center !important;
+        max-width: 100% !important;
+        margin: 1.5rem 0 !important;
+        padding: 2rem !important;
+    }
+    
+    [data-theme="dark"] .service-image,
+    .dark-theme .service-image {
+        width: 150px !important;
+        height: 150px !important;
+        margin: 0 auto 1.5rem auto !important;
+    }
+    
+    [data-theme="dark"] .service-activities,
+    .dark-theme .service-activities {
+        padding: 2rem 1rem !important;
+    }
+    
+    [data-theme="dark"] .service-activities h3,
+    .dark-theme .service-activities h3 {
+        font-size: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    [data-theme="dark"] .service-philosophy,
+    .dark-theme .service-philosophy {
+        padding: 2rem 1rem !important;
+        margin: 2rem 0 !important;
+    }
+    
+    [data-theme="dark"] .service-philosophy .philosophy-content,
+    .dark-theme .service-philosophy .philosophy-content {
+        padding: 2rem !important;
+    }
+    
+    [data-theme="dark"] .service-philosophy h3,
+    .dark-theme .service-philosophy h3 {
+        font-size: 1.8rem !important;
+    }
+    
+    [data-theme="dark"] .service-philosophy .philosophy-content p,
+    .dark-theme .service-philosophy .philosophy-content p {
+        font-size: 1.1rem !important;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     body {

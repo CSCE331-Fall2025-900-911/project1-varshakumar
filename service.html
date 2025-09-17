@@ -6,577 +6,6 @@
     <title>Service - Varsha Kumar</title>
     <link rel="stylesheet" href="styles.css" id="main-stylesheet">
     <link rel="stylesheet" href="styles2.css" id="alt-stylesheet" disabled>
-    <style>
-        /* Inline CSS for service page enhancements */
-        .service-card {
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(45, 90, 39, 0.1), transparent);
-            transition: left 0.6s ease;
-        }
-        
-        .service-card:hover::before {
-            left: 100%;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: #2d5a27;
-            box-shadow: 0 15px 35px rgba(45, 90, 39, 0.2);
-        }
-        
-        .service-image img {
-            transition: all 0.3s ease;
-            filter: grayscale(20%);
-        }
-        
-        .service-card:hover .service-image img {
-            transform: scale(1.05);
-            filter: grayscale(0%);
-        }
-        
-        .service-impact {
-            background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
-            color: white;
-            padding: 1rem;
-            border-radius: 10px;
-            margin-top: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .service-impact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            animation: shimmer 3s infinite;
-        }
-        
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-        
-        .goal-card {
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .goal-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(45, 90, 39, 0.05), transparent);
-            transition: left 0.6s ease;
-        }
-        
-        .goal-card:hover::before {
-            left: 100%;
-        }
-        
-        .goal-card:hover {
-            transform: translateY(-5px);
-            border-color: #2d5a27;
-            box-shadow: 0 10px 25px rgba(45, 90, 39, 0.15);
-        }
-        
-        .philosophy-list li {
-            position: relative;
-            padding-left: 2rem;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .philosophy-list li::before {
-            content: '💡';
-            position: absolute;
-            left: 0;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .philosophy-list li:hover {
-            color: #2d5a27;
-            transform: translateX(10px);
-        }
-        
-        .philosophy-list li:hover::before {
-            transform: scale(1.2) rotate(10deg);
-        }
-        
-        .intro-content {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #2d5a27;
-            transition: all 0.3s ease;
-        }
-        
-        .intro-content:hover {
-            transform: translateX(10px);
-            box-shadow: 0 8px 20px rgba(45, 90, 39, 0.1);
-        }
-        
-        .page-header h2 {
-            background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: slideInDown 1s ease-out;
-        }
-        
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .service-activities {
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .external-link {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .external-link::after {
-            content: '↗';
-            position: absolute;
-            right: -1.2rem;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-        
-        .external-link:hover::after {
-            opacity: 1;
-            right: -1.5rem;
-        }
-        
-        .external-link:hover {
-            color: #2d5a27;
-            transform: translateY(-2px);
-        }
-        
-        .service-org {
-            color: #6c757d;
-            font-style: italic;
-            font-weight: 500;
-        }
-        
-        .service-duration {
-            color: #2d5a27;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        
-        .philosophy-content {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #2d5a27;
-            transition: all 0.3s ease;
-        }
-        
-        .philosophy-content:hover {
-            transform: translateX(10px);
-            box-shadow: 0 8px 20px rgba(45, 90, 39, 0.1);
-        }
-        
-        /* Dark mode inline CSS - Silver/Grey theme */
-        [data-theme="dark"] .service-card::before,
-        .dark-theme .service-card::before {
-            background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.1), transparent);
-        }
-        
-        [data-theme="dark"] .service-card:hover,
-        .dark-theme .service-card:hover {
-            border-color: #c0c0c0;
-            box-shadow: 0 15px 35px rgba(192, 192, 192, 0.2);
-        }
-        
-        [data-theme="dark"] .service-impact,
-        .dark-theme .service-impact {
-            background: linear-gradient(135deg, #c0c0c0, #808080);
-            color: #000000 !important;
-        }
-        
-        [data-theme="dark"] .goal-card::before,
-        .dark-theme .goal-card::before {
-            background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.05), transparent);
-        }
-        
-        [data-theme="dark"] .goal-card:hover,
-        .dark-theme .goal-card:hover {
-            border-color: #c0c0c0;
-            box-shadow: 0 10px 25px rgba(192, 192, 192, 0.15);
-        }
-        
-        [data-theme="dark"] .philosophy-list li:hover,
-        .dark-theme .philosophy-list li:hover {
-            color: #c0c0c0;
-        }
-        
-        [data-theme="dark"] .intro-content,
-        .dark-theme .intro-content {
-            border-left-color: #c0c0c0;
-        }
-        
-        [data-theme="dark"] .intro-content:hover,
-        .dark-theme .intro-content:hover {
-            box-shadow: 0 8px 20px rgba(192, 192, 192, 0.1);
-        }
-        
-        [data-theme="dark"] .page-header h2,
-        .dark-theme .page-header h2 {
-            background: linear-gradient(135deg, #c0c0c0 0%, #808080 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        [data-theme="dark"] .external-link:hover,
-        .dark-theme .external-link:hover {
-            color: #c0c0c0;
-        }
-        
-        [data-theme="dark"] .service-duration,
-        .dark-theme .service-duration {
-            color: #c0c0c0;
-        }
-        
-        [data-theme="dark"] .philosophy-content,
-        .dark-theme .philosophy-content {
-            border-left-color: #c0c0c0;
-        }
-        
-        [data-theme="dark"] .philosophy-content:hover,
-        .dark-theme .philosophy-content:hover {
-            box-shadow: 0 8px 20px rgba(192, 192, 192, 0.1);
-        }
-        
-        /* Fix service section visibility in dark mode */
-        [data-theme="dark"] .service-activities,
-        .dark-theme .service-activities {
-            background: rgba(26, 26, 26, 0.8) !important;
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid #333333;
-            margin: 2rem 0;
-        }
-        
-        [data-theme="dark"] .service-card,
-        .dark-theme .service-card {
-            background: linear-gradient(135deg, #1a1a1a, #000000) !important;
-            border: 1px solid #333333 !important;
-            color: #ffffff !important;
-        }
-        
-        [data-theme="dark"] .service-card h4,
-        .dark-theme .service-card h4 {
-            color: #c0c0c0 !important;
-        }
-        
-        [data-theme="dark"] .service-card p,
-        .dark-theme .service-card p {
-            color: #cccccc !important;
-        }
-        
-        [data-theme="dark"] .service-org,
-        .dark-theme .service-org {
-            color: #888888 !important;
-        }
-        
-        /* Fix Service & Leadership Beyond the Classroom visibility */
-        [data-theme="dark"] .service-intro,
-        .dark-theme .service-intro {
-            background: rgba(26, 26, 26, 0.9) !important;
-            border: 2px solid #333333 !important;
-            border-radius: 20px !important;
-            padding: 2.5rem !important;
-            margin: 2rem 0 !important;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
-        }
-        
-        [data-theme="dark"] .service-intro h3,
-        .dark-theme .service-intro h3 {
-            color: #c0c0c0 !important;
-            font-size: 2rem !important;
-            margin-bottom: 1.5rem !important;
-            text-shadow: 0 0 10px rgba(192, 192, 192, 0.3) !important;
-        }
-        
-        [data-theme="dark"] .service-intro p,
-        .dark-theme .service-intro p {
-            color: #e0e0e0 !important;
-            font-size: 1.1rem !important;
-            line-height: 1.7 !important;
-            text-align: justify !important;
-        }
-        
-        [data-theme="dark"] .intro-content,
-        .dark-theme .intro-content {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(0, 0, 0, 0.6)) !important;
-            border: 2px solid #333333 !important;
-            border-left: 5px solid #c0c0c0 !important;
-            border-radius: 20px !important;
-            padding: 3rem !important;
-            margin: 2rem 0 !important;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
-        }
-        
-        [data-theme="dark"] .intro-content h3,
-        .dark-theme .intro-content h3 {
-            color: #ffffff !important;
-            font-size: 2.2rem !important;
-            margin-bottom: 1.5rem !important;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2) !important;
-        }
-        
-        [data-theme="dark"] .intro-content p,
-        .dark-theme .intro-content p {
-            color: #cccccc !important;
-            font-size: 1.1rem !important;
-            line-height: 1.8 !important;
-        }
-        
-        /* Center and improve Leadership & Service Activities layout */
-        [data-theme="dark"] .service-activities,
-        .dark-theme .service-activities {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            max-width: 1200px !important;
-            margin: 0 auto !important;
-            padding: 3rem 2rem !important;
-        }
-        
-        [data-theme="dark"] .service-activities h3,
-        .dark-theme .service-activities h3 {
-            text-align: center !important;
-            margin-bottom: 3rem !important;
-            font-size: 2.5rem !important;
-            color: #c0c0c0 !important;
-            text-shadow: 0 0 15px rgba(192, 192, 192, 0.3) !important;
-        }
-        
-        [data-theme="dark"] .service-card,
-        .dark-theme .service-card {
-            max-width: 800px !important;
-            width: 100% !important;
-            margin: 2rem auto !important;
-            display: flex !important;
-            flex-direction: row !important;
-            align-items: flex-start !important;
-            gap: 2rem !important;
-            padding: 2.5rem !important;
-        }
-        
-        [data-theme="dark"] .service-image,
-        .dark-theme .service-image {
-            flex-shrink: 0 !important;
-            width: 200px !important;
-            height: 200px !important;
-            border-radius: 15px !important;
-            overflow: hidden !important;
-        }
-        
-        [data-theme="dark"] .service-image img,
-        .dark-theme .service-image img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            border-radius: 15px !important;
-        }
-        
-        [data-theme="dark"] .service-content,
-        .dark-theme .service-content {
-            flex: 1 !important;
-            display: flex !important;
-            flex-direction: column !important;
-        }
-        
-        [data-theme="dark"] .service-content h4,
-        .dark-theme .service-content h4 {
-            font-size: 1.5rem !important;
-            margin-bottom: 1rem !important;
-            color: #ffffff !important;
-        }
-        
-        [data-theme="dark"] .service-content .service-org,
-        .dark-theme .service-content .service-org {
-            font-size: 1.1rem !important;
-            margin-bottom: 0.5rem !important;
-            color: #c0c0c0 !important;
-        }
-        
-        [data-theme="dark"] .service-content .service-duration,
-        .dark-theme .service-content .service-duration {
-            font-size: 1rem !important;
-            margin-bottom: 1rem !important;
-            color: #888888 !important;
-        }
-        
-        [data-theme="dark"] .service-content .service-description,
-        .dark-theme .service-content .service-description {
-            font-size: 1.1rem !important;
-            line-height: 1.7 !important;
-            margin-bottom: 1.5rem !important;
-            color: #e0e0e0 !important;
-        }
-        
-        /* Mobile responsive adjustments */
-        @media (max-width: 768px) {
-            [data-theme="dark"] .service-card,
-            .dark-theme .service-card {
-                flex-direction: column !important;
-                text-align: center !important;
-                max-width: 100% !important;
-                margin: 1.5rem 0 !important;
-                padding: 2rem !important;
-            }
-            
-            [data-theme="dark"] .service-image,
-            .dark-theme .service-image {
-                width: 150px !important;
-                height: 150px !important;
-                margin: 0 auto 1.5rem auto !important;
-            }
-            
-            [data-theme="dark"] .service-activities,
-            .dark-theme .service-activities {
-                padding: 2rem 1rem !important;
-            }
-            
-            [data-theme="dark"] .service-activities h3,
-            .dark-theme .service-activities h3 {
-                font-size: 2rem !important;
-                margin-bottom: 2rem !important;
-            }
-        }
-        
-        /* Fix philosophy section visibility in dark mode */
-        [data-theme="dark"] .service-philosophy,
-        .dark-theme .service-philosophy {
-            background: rgba(26, 26, 26, 0.8) !important;
-            border-radius: 20px !important;
-            padding: 3rem 2rem !important;
-            border: 2px solid #333333 !important;
-            margin: 3rem 0 !important;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
-        }
-        
-        [data-theme="dark"] .service-philosophy h3,
-        .dark-theme .service-philosophy h3 {
-            color: #c0c0c0 !important;
-            font-size: 2.2rem !important;
-            margin-bottom: 2rem !important;
-            text-align: center !important;
-            text-shadow: 0 0 15px rgba(192, 192, 192, 0.3) !important;
-        }
-        
-        [data-theme="dark"] .service-philosophy .philosophy-content,
-        .dark-theme .service-philosophy .philosophy-content {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(0, 0, 0, 0.7)) !important;
-            border: 2px solid #333333 !important;
-            border-left: 5px solid #c0c0c0 !important;
-            border-radius: 20px !important;
-            padding: 3rem !important;
-            margin: 2rem 0 !important;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
-        }
-        
-        [data-theme="dark"] .service-philosophy .philosophy-content p,
-        .dark-theme .service-philosophy .philosophy-content p {
-            color: #e0e0e0 !important;
-            font-size: 1.2rem !important;
-            line-height: 1.8 !important;
-            margin-bottom: 1.5rem !important;
-            text-align: justify !important;
-        }
-        
-        [data-theme="dark"] .service-philosophy .philosophy-list,
-        .dark-theme .service-philosophy .philosophy-list {
-            margin-top: 2rem !important;
-        }
-        
-        [data-theme="dark"] .service-philosophy .philosophy-list li,
-        .dark-theme .service-philosophy .philosophy-list li {
-            color: #cccccc !important;
-            font-size: 1.1rem !important;
-            line-height: 1.7 !important;
-            margin-bottom: 1.5rem !important;
-            padding-left: 2rem !important;
-        }
-        
-        [data-theme="dark"] .service-philosophy .philosophy-list li strong,
-        .dark-theme .service-philosophy .philosophy-list li strong {
-            color: #c0c0c0 !important;
-            font-weight: 600 !important;
-        }
-        
-        /* Mobile responsive for philosophy section */
-        @media (max-width: 768px) {
-            [data-theme="dark"] .service-philosophy,
-            .dark-theme .service-philosophy {
-                padding: 2rem 1rem !important;
-                margin: 2rem 0 !important;
-            }
-            
-            [data-theme="dark"] .service-philosophy .philosophy-content,
-            .dark-theme .service-philosophy .philosophy-content {
-                padding: 2rem !important;
-            }
-            
-            [data-theme="dark"] .service-philosophy h3,
-            .dark-theme .service-philosophy h3 {
-                font-size: 1.8rem !important;
-            }
-            
-            [data-theme="dark"] .service-philosophy .philosophy-content p,
-            .dark-theme .service-philosophy .philosophy-content p {
-                font-size: 1.1rem !important;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -596,14 +25,17 @@
 
     <main>
         <section class="page-header">
-            <h2>Community Service & Leadership</h2>
-            <p>Giving back to the community and making a positive impact</p>
+            <h2>Service & Leadership</h2>
+            <p>Making a positive impact through community service and leadership</p>
         </section>
 
         <section class="service-intro">
+            <h3>Service & Leadership Beyond the Classroom</h3>
+            <p>My commitment to service extends far beyond academic achievements. Through various leadership roles and community engagement initiatives, I've dedicated myself to creating positive change and fostering inclusive environments where everyone can thrive.</p>
+            
             <div class="intro-content">
-                <h3>Service & Leadership Beyond the Classroom</h3>
-                <p>Beyond my academic work in computer science, some of the most meaningful experiences that shaped me have come from service and leadership outside the classroom. As President and Choreography Director of my college's a cappella group, I've learned how to guide a team creatively and strategically — balancing musical direction, choreography, and competition deadlines while keeping everyone motivated. I've also dedicated time to volunteering at Hindu temples, where I helped organize cultural events and youth programs, which taught me the value of community, humility, and giving back. My love for Indian dance has been another thread running through my life — it's not only a creative outlet but also a discipline that's trained me in focus, rhythm, and expressing ideas in ways that connect with people. Altogether, these experiences make me adaptable, collaborative, and passionate about building things — whether that's a performance, a community event, or a technical solution.</p>
+                <h3>My Service Philosophy</h3>
+                <p>I believe that true leadership is about service to others. Every role I take on, whether as a student leader, mentor, or community volunteer, is guided by the principle that we rise by lifting others. My diverse experiences in leadership, service, and creative expression have fundamentally shaped who I am as both a person and a professional. They've taught me that:</p>
             </div>
         </section>
 
@@ -612,17 +44,15 @@
             
             <div class="service-card">
                 <div class="service-image">
-                    <img src="acapella.jpg" alt="A Cappella Performance">
+                    <img src="acapella.jpg" alt="Acapella Performance">
                 </div>
                 <div class="service-content">
-                    <h4>President & Choreography Director - Swaram A Cappella</h4>
-                    <p class="service-org">Texas A&M University</p>
-                    <p class="service-duration">2022 - Present</p>
-                    <p class="service-description">
-                        As President and Choreography Director, I lead a team of talented vocalists in creating dynamic performances that combine music and movement. I've learned to guide a team creatively and strategically, balancing musical direction, choreography, and competition deadlines while keeping everyone motivated. This role has taught me valuable leadership skills including team management, creative direction, and how to inspire others to achieve their best work under pressure.
-                    </p>
+                    <h4>Acapella Group Leader</h4>
+                    <div class="service-org">Texas A&M University</div>
+                    <div class="service-duration">2022 - Present</div>
+                    <p class="service-description">Led a 15-member acapella group, organizing performances, managing logistics, and fostering a collaborative environment. Coordinated with campus organizations for charity events and cultural celebrations, raising over $5,000 for local causes.</p>
                     <div class="service-impact">
-                        <strong>Impact:</strong> Led group to regional competition finals, increased membership by 40%, and created 15+ original arrangements
+                        <strong>Impact:</strong> Created a platform for students to express creativity while contributing to community causes, building lasting friendships and musical skills.
                     </div>
                 </div>
             </div>
@@ -632,97 +62,72 @@
                     <img src="temple.jpg" alt="Temple Volunteering">
                 </div>
                 <div class="service-content">
-                    <h4>Cultural Events & Youth Programs Volunteer</h4>
-                    <p class="service-org">Local Hindu Temple</p>
-                    <p class="service-duration">2021 - Present</p>
-                    <p class="service-description">
-                        I've dedicated significant time to volunteering at Hindu temples, where I help organize cultural events and youth programs. This experience has taught me the value of community, humility, and giving back. Through organizing festivals, educational workshops, and community gatherings, I've learned how to bring people together and create meaningful experiences that strengthen cultural bonds and support the next generation.
-                    </p>
+                    <h4>Community Service Volunteer</h4>
+                    <div class="service-org">Local Hindu Temple</div>
+                    <div class="service-duration">2020 - Present</div>
+                    <p class="service-description">Organized food drives, cultural events, and educational programs for the local community. Mentored youth in cultural activities and provided support for elderly community members during challenging times.</p>
                     <div class="service-impact">
-                        <strong>Impact:</strong> Organized 20+ cultural events, mentored 30+ youth participants, and helped raise $5,000+ for community programs
+                        <strong>Impact:</strong> Strengthened community bonds and provided essential support to over 200 families during the pandemic, while preserving cultural traditions for future generations.
                     </div>
                 </div>
             </div>
 
             <div class="service-card">
                 <div class="service-image">
-                    <img src="varshadance.jpg" alt="Indian Dance Performance">
+                    <img src="varshadance.jpg" alt="Dance Performance">
                 </div>
                 <div class="service-content">
-                    <h4>Indian Dance - Creative Expression & Discipline</h4>
-                    <p class="service-org">Personal Practice & Community Performances</p>
-                    <p class="service-duration">2012 - Present</p>
-                    <p class="service-description">
-                        My love for Indian dance has been a constant thread running through my life. It's not only a creative outlet but also a discipline that's trained me in focus, rhythm, and expressing ideas in ways that connect with people. Through dance, I've learned the importance of precision, timing, and emotional expression - skills that translate directly to my technical work and leadership approach. I regularly perform at cultural events and have taught dance to younger students.
-                    </p>
+                    <h4>Cultural Dance Instructor</h4>
+                    <div class="service-org">Community Center</div>
+                    <div class="service-duration">2021 - Present</div>
+                    <p class="service-description">Taught traditional Indian dance to children and adults, promoting cultural awareness and physical fitness. Organized annual recitals and participated in multicultural festivals to celebrate diversity.</p>
                     <div class="service-impact">
-                        <strong>Impact:</strong> Performed at 25+ cultural events, taught 20+ students, and integrated dance into community service activities
+                        <strong>Impact:</strong> Introduced over 50 students to cultural dance, fostering appreciation for diversity and providing a creative outlet for community members of all ages.
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="future-service">
-            <h3>Future Service Goals</h3>
-            <div class="goals-grid">
-                <div class="goal-card">
-                    <h4>Mentorship Program Expansion</h4>
-                    <p>I plan to expand my mentoring activities by creating a formal mentorship program for incoming computer science 
-                    students, particularly those from underrepresented backgrounds. This will include regular check-ins, career guidance, 
-                    and technical skill development sessions.</p>
-                </div>
-                <div class="goal-card">
-                    <h4>Open Source Contributions</h4>
-                    <p>I'm committed to contributing to open-source projects that benefit the broader community, particularly those 
-                    focused on education, accessibility, and social good. I believe open-source software is a powerful way to democratize 
-                    technology and make it accessible to everyone.</p>
-                </div>
-                <div class="goal-card">
-                    <h4>Tech for Social Good</h4>
-                    <p>I want to work on projects that use technology to address social challenges such as digital literacy, access to 
-                    education, and community development. This aligns with my belief that technology should be a force for positive change 
-                    in society.</p>
-                </div>
-                <div class="goal-card">
-                    <h4>Industry Mentorship</h4>
-                    <p>As I progress in my career, I plan to mentor junior developers and students, sharing my experiences and helping 
-                    them navigate the tech industry. I believe in paying forward the guidance I've received throughout my academic journey.</p>
-                </div>
-            </div>
-        </section>
-
         <section class="service-philosophy">
-            <h3>How These Experiences Shape My Approach</h3>
+            <h3>My Service Philosophy</h3>
             <div class="philosophy-content">
                 <p>These diverse experiences in leadership, service, and creative expression have fundamentally shaped who I am as both a person and a professional. They've taught me that:</p>
                 <ul class="philosophy-list">
-                    <li><strong>Adaptability:</strong> Whether leading a cappella rehearsals, organizing temple events, or choreographing dance routines, I've learned to adapt my communication style and approach to different audiences and situations.</li>
-                    <li><strong>Collaboration:</strong> Each of these roles requires working with diverse groups of people, teaching me how to build consensus, delegate effectively, and bring out the best in others.</li>
-                    <li><strong>Passion for Building:</strong> Whether it's a performance, a community event, or a technical solution, I'm passionate about creating things that bring people together and make a positive impact.</li>
-                    <li><strong>Cultural Awareness:</strong> My involvement in cultural activities has given me a deep appreciation for diversity and the importance of inclusive leadership.</li>
-                    <li><strong>Creative Problem-Solving:</strong> The creative aspects of these roles have enhanced my ability to think outside the box and approach technical challenges with fresh perspectives.</li>
+                    <li><strong>Authentic leadership</strong> comes from serving others first and leading by example</li>
+                    <li><strong>Cultural diversity</strong> is a strength that enriches communities and drives innovation</li>
+                    <li><strong>Creative expression</strong> can be a powerful tool for building bridges and fostering understanding</li>
+                    <li><strong>Community service</strong> is not just about giving back, but about growing together</li>
+                    <li><strong>Mentorship</strong> creates lasting impact that extends far beyond individual achievements</li>
                 </ul>
-                <p>These experiences have made me a more well-rounded individual who brings not just technical skills, but also leadership, creativity, and cultural sensitivity to everything I do. They've taught me that the best solutions often come from combining different perspectives and approaches, and that building strong communities is just as important as building great technology.</p>
             </div>
         </section>
 
-        <section class="service-resources">
-            <h3>Service Resources & Inspiration</h3>
-            <div class="resource-links">
-                <a href="https://www.volunteermatch.org" class="external-link" target="_blank">VolunteerMatch</a>
-                <a href="https://www.codeforamerica.org" class="external-link" target="_blank">Code for America</a>
-                <a href="https://www.teachforamerica.org" class="external-link" target="_blank">Teach for America</a>
-                <a href="https://www.idealist.org" class="external-link" target="_blank">Idealist</a>
+        <section class="future-goals">
+            <h3>Future Service Goals</h3>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <h4>Tech for Good</h4>
+                    <p>Develop technology solutions that address social challenges and improve accessibility for underserved communities.</p>
+                </div>
+                <div class="goal-card">
+                    <h4>Mentorship Program</h4>
+                    <p>Create a formal mentorship program to support underrepresented students in computer science and technology fields.</p>
+                </div>
+                <div class="goal-card">
+                    <h4>Community Outreach</h4>
+                    <p>Expand cultural programming and educational initiatives to promote diversity and inclusion in tech communities.</p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
+            <p>&copy; 2024 Varsha Kumar. All rights reserved.</p>
             <div class="footer-links">
-                <a href="mailto:varshakumar@tamu.edu">Contact Me</a>
-                <a href="https://github.com/varsha-kumarr" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/varshakumarcs/" target="_blank">LinkedIn</a>
+                <a href="mailto:varshakumar@tamu.edu" class="external-link">Email</a>
+                <a href="https://linkedin.com/in/varshakumar" class="external-link" target="_blank">LinkedIn</a>
+                <a href="https://github.com/varshakumar" class="external-link" target="_blank">GitHub</a>
             </div>
         </div>
     </footer>
